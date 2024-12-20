@@ -1,0 +1,1293 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+/* img{
+    image-rendering:auto;
+} */
+
+/* header start */
+
+.header {
+    width: 100%;
+    height: 100vh;
+    /* background: linear-gradient(to right, gray, rgba(138, 112, 112, 0.26)), url("./img/hand-workplace-working-analysis-note.jpg") no-repeat 0% 12%/cover; */
+    background: url("./img/hand-workplace-working-analysis-note.jpg") no-repeat 90% 0%/cover;
+}
+
+.navbar {
+    color: #ffffff;
+    background-color: blue;
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+}
+
+.menu,
+.chkbox {
+    display: none;
+}
+
+.nav-1 {
+    display: flex;
+    /* justify-content: flex-start; */
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+}
+
+.company-name {
+    line-height: 1.25;
+    /* for animation */
+    perspective: 80px;
+}
+
+.company-name h1 {
+    font-size: 3.7rem;
+    font-family: 'Courier New', Courier, monospace;
+    /* for animation */
+    animation: rotate1 5s ease-in-out infinite;
+}
+
+@keyframes rotate1 {
+    from {
+        transform: translateX(0%) rotateY(0deg);
+    }
+
+    50% {
+        transform: translateX(10%) rotate(-10deg);
+    }
+
+    60%,
+    70%,
+    80% {
+        color: rgb(236, 109, 188);
+    }
+
+    90% {
+        color: goldenrod;
+    }
+
+    to {
+        transform: translateX(0%) rotate(0deg) rotateY(360deg);
+        color: goldenrod;
+    }
+}
+
+.company-name h4 {
+    font-size: 1.3rem;
+    letter-spacing: 0.8px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* for animation */
+    animation: translate1 1s linear;
+}
+
+@keyframes translate1 {
+    from {
+        transform: translateX(10%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+
+.nav-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+
+}
+
+.nav-2-list {
+    list-style-type: none;
+    display: flex;
+    gap: 25px;
+}
+
+
+.nav-2-list li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    /* for animation */
+    position: relative;
+    transition: all 0.5s ease-in;
+}
+
+.nav-2-list li a:hover {
+    color: #34d434;
+    font-size: 2.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.nav-2-list li a::after {
+    position: absolute;
+    left: 0%;
+    bottom: -22%;
+    content: "";
+    background-color: rgb(231, 59, 165);
+    width: 0%;
+    height: 3px;
+    transition: all 0.5s ease-in;
+}
+
+.nav-2-list li a:hover::after {
+    width: 100%;
+}
+
+
+.nav-2-sm {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    /* for animation */
+    perspective: 200px;
+}
+
+.nav-2-sm img {
+    width: 40px;
+    height: 40px;
+}
+
+.nav-2-sm img:hover {
+    /* for animation */
+    cursor: pointer;
+    filter: drop-shadow(2px 2px 5px #73b78a) drop-shadow(-2px -2px 5px #df811d);
+    animation: flip1 1s ease;
+}
+
+@keyframes flip1 {
+    from {
+        transform: rotate3d(0, 1, 0, 0deg);
+    }
+
+    50% {
+        transform: scale3d(0.5, 0.5, 0.5) rotate3d(0, 1, 0, 180deg);
+    }
+
+    to {
+        transform: rotate3d(0, 1, 0, 360deg);
+    }
+}
+
+.action-page {
+    width: 100%;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    color: #ffffff;
+}
+
+.action-1 p {
+    font-size: 7rem;
+    font-family: Arial, Helvetica, sans-serif;
+    /* for animation */
+    animation: slide1 2s 1 ease-in-out;
+}
+
+
+@keyframes slide1 {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
+}
+
+.action-2 {
+    width: 50%;
+}
+
+.action-2 p {
+    text-align: justify;
+    font-size: 2.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 1.5;
+    /* for animation */
+    animation: slide2 2s 1 ease-in-out;
+}
+
+
+@keyframes slide2 {
+    from {
+        transform: translateY(100%);
+    }
+
+    to {
+        transform: translateY(0%);
+    }
+}
+
+.btn-1 {
+    text-align: center;
+    /* for animation .btn-1 button */
+    perspective: 80px;
+}
+
+.btn-1 button {
+    padding: 25px;
+    background: blue;
+    border: none;
+    border-radius: 10px;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.5rem;
+    cursor: pointer;
+    /* for animation */
+    animation: opacity-1 5s 0.1s 1 ease-out forwards;
+}
+
+@keyframes opacity-1 {
+    0% {
+        opacity: 0;
+    }
+
+    10%,
+    20%,
+    30%,
+    40% {
+        opacity: 0;
+    }
+
+    90% {
+        color: #ebe0e0b7;
+        background: rgb(88, 88, 221);
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotateX(360deg);
+        color: goldenrod;
+        background: rgb(163, 9, 9);
+    }
+}
+
+
+
+/* header end */
+
+
+/* about-us start */
+
+.about-us-page {
+    width: 100%;
+    height: 100vh;
+    background: #615fbd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+}
+
+.about-us-text {
+    width: 35%;
+    height: 35%;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: center;
+    /* for animation .about-us-text h2 */
+    perspective: 500px;
+}
+
+.about-us-text h2 {
+    font-size: 7rem;
+    /* for animation */
+    animation: vertical1 10s infinite linear;
+}
+
+@keyframes vertical1 {
+    from {
+        transform: translateX(0%) rotateX(0deg);
+    }
+
+    50% {
+        transform: translateX(20%) rotateX(360deg);
+        color: #daa520;
+    }
+
+    to {
+        transform: translateX(0%) rotateX(0deg);
+    }
+}
+
+.about-us-text p {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    text-align: justify;
+}
+
+.btn-2 {
+    /* for animation .btn-2 button */
+    perspective: 200px;
+}
+
+.btn-2 button {
+    padding: 15px;
+    background: blue;
+    border: none;
+    border-radius: 10px;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.3rem;
+    margin: 2.5% 0 0 0;
+    cursor: pointer;
+    /* for animation */
+    animation: opacity-2 5s 0.1s infinite ease-out;
+}
+
+@keyframes opacity-2 {
+    0% {
+        opacity: 0;
+    }
+
+    10%,
+    20%,
+    30%,
+    40% {
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 0.7;
+        color: #ebe0e0b7;
+        background: rgb(88, 88, 221);
+    }
+
+    90% {
+        opacity: 0.9;
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotateX(360deg);
+        color: goldenrod;
+        background: rgb(163, 9, 9);
+    }
+}
+
+.about-us-image {
+    width: 50%;
+    height: 50%;
+    /* for animation .about-us-image img */
+    perspective: 1000px;
+}
+
+.about-us-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.about-us-image img:hover {
+    /* for animation */
+    transform: scale(0.75) rotateY(360deg) rotateZ(360deg);
+    transition: all 3s ease;
+}
+
+/* about-us end */
+
+/* card start */
+.card-page {
+    width: 100%;
+    height: 100vh;
+    background: #eee6e6;
+}
+
+.box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* for animation */
+    perspective: 1000px;
+}
+
+.box-1 {
+    width: 25%;
+    height: 85%;
+    color: #ffffff;
+    /* background-color: #009990; */
+    background-color: #124f73;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 10px;
+    overflow: hidden;
+    /* for animation */
+    transition: transform 0.5s ease-in-out;
+}
+
+.box-1:hover {
+    transform: skewX(-3deg) scale(0.3) rotate3d(0, 1, 0, 360deg);
+    cursor: pointer;
+}
+
+.box-image {
+    width: 100%;
+    height: 58%;
+}
+
+.box-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.box-1-text {
+    width: 100%;
+    height: 42%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 30px;
+    /* for animation */
+    perspective: 500px;
+}
+
+.box-1-text h2 {
+    font-size: 2rem;
+}
+
+.box-1-text p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.box-1-text button {
+    padding: 10px;
+    background: #7E1891;
+    border: none;
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    /* for animation */
+    animation: twist1 5s 2s ease-in infinite;
+}
+
+@keyframes twist1 {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+        color: blue;
+        background: rgb(176, 179, 29);
+    }
+
+}
+
+
+/* card end */
+
+/* review start */
+.review-page {
+    width: 100%;
+    height: 100vh;
+    background: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.review {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    color: #ffffff;
+    font-size: 5rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.review span {
+    font-size: 4rem;
+}
+
+/* review end */
+
+/* instagram follow start */
+.instagram-follow {
+    width: 100%;
+    height: 100vh;
+    /*! background: #8280e4; */
+    background: #313d44;
+    position: relative;
+    padding: 0 10%;
+}
+
+.insta-section-1 {
+    width: 100%;
+    height: 10%;
+    font-size: 4rem;
+    color: #ffffff;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.insta-section-2 {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px 0;
+    /* for animation */
+    perspective: 1000px;
+}
+
+.insta-section-2 img {
+    width: 30%;
+    height: 45%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.diagonal-movement:not(:hover) {
+    /* for animation */
+    cursor: pointer;
+    animation: diagonal1 2s linear;
+}
+
+@keyframes diagonal1 {
+    from {
+        transform: rotate3d(1, 1, 0, 0deg);
+    }
+
+    50% {
+        box-shadow: 10px 10px 10px 2px yellow;
+    }
+
+    75% {
+        box-shadow: -10px -10px 10px 2px rgb(40, 219, 40);
+    }
+
+    to {
+        transform: rotate3d(1, 1, 0, -360deg);
+    }
+}
+
+.insta-section-3 {
+    width: 100%;
+    height: 7%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.insta-section-3 img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.insta-section-3 span {
+    font-size: 3rem;
+    padding: 0 0 0 10px;
+    color: #ffffff;
+}
+
+/* instagram follow end */
+
+/* footer start */
+.footer {
+    width: 100%;
+    height: 100vh;
+}
+
+/* registration start */
+
+.registration {
+    width: 100%;
+    height: 85%;
+    background-color: #8f2154;
+    /* background-color: #124f73; */
+    color: #d5b32f;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8%;
+}
+
+.registration-text {
+    width: 40%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: justify;
+}
+
+.registration-text>p:first-child {
+    font-size: 3.5rem;
+}
+
+.registration-text>p:last-child {
+    font-size: 2rem;
+    line-height: 1.5;
+}
+
+.registration-form {
+    width: 50%;
+    height: 100%;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-section-1 {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.form-section-1 div {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-section-1 label,
+.form-section-2 label {
+    line-height: 2.5;
+}
+
+.form-section-1 input {
+    padding: 8px;
+    border-radius: 5px;
+    border: #d5b32f solid 2px;
+    outline: none;
+}
+
+.form-section-2 {
+    width: 100%;
+    height: 80%;
+    display: flex;
+}
+
+.form-section-2 div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-section-2 div>textarea {
+    height: 50%;
+    border-radius: 8px;
+    border: #d5b32f solid 2px;
+    outline: none;
+    padding: 10px;
+}
+
+/* registration end */
+
+/* footer end */
+
+
+
+
+/* media query small laptop start */
+
+/* references
+
+lenovo laptop e41-20,e41-25 
+
+screen size 
+16:9
+1366x768 pixels */
+
+@media only screen and (min-width:1000px) and (max-width:1300px) {
+    .header {
+        background: url("./img/hand-workplace-working-analysis-note.jpg") no-repeat 60% 0%/cover;
+    }
+
+    .action-1,
+    .action-2 {
+        width: 80%;
+    }
+
+    .action-1 p {
+        font-size: 5rem;
+    }
+
+    .action-2 p {
+        font-size: 2.5rem;
+    }
+
+    .btn-1 button {
+        padding: 20px;
+    }
+
+    .about-us-text h2 {
+        font-size: 5rem;
+    }
+
+    .about-us-text p {
+        font-size: 2rem;
+    }
+
+    .btn-2 button {
+        padding: 12px;
+        font-size: 2rem;
+    }
+
+    .review {
+        font-size: 3rem;
+    }
+
+    .review span {
+        font-size: 2.2rem;
+    }
+
+    .insta-section-1 {
+        font-size: 3.5rem;
+    }
+
+    .insta-section-3 span {
+        font-size: 2.5rem;
+    }
+
+}
+
+/* media query small laptop end */
+
+
+
+
+
+/* media query tablet start */
+@media only screen and (min-width:601px) and (max-width:999px) {
+    .header {
+        background: url("./img/hand-workplace-working-analysis-note.jpg") no-repeat 60% 0%/cover;
+    }
+    .nav-1 {
+        gap: 5px;
+    }
+
+    .logo img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .company-name h1 {
+        font-size: 2.5rem;
+    }
+
+    .company-name h4 {
+        font-size: 1rem;
+        letter-spacing: normal;
+        text-wrap: nowrap;
+    }
+
+    .nav-2-list li a {
+        font-size: 1.5rem;
+    }
+
+    .nav-2-list li a:hover {
+        font-size: 2rem;
+    }
+
+    .nav-2-list li a::after {
+        height: 2px;
+    }
+
+    .nav-2-sm img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .action-1,
+    .action-2 {
+        width: 80%;
+    }
+
+    .action-1 p {
+        font-size: 4.5rem;
+    }
+
+    .action-1 p {
+        font-size: 4rem;
+    }
+
+    .action-2 p {
+        font-size: 2rem;
+    }
+
+    .btn-1 button {
+        padding: 10px;
+        font-size: 1.7rem;
+    }
+
+    .about-us-text {
+        width: 42%;
+        gap: 10px;
+    }
+
+    .about-us-text h2 {
+        font-size: 4rem;
+    }
+
+    .about-us-text p {
+        font-size: 1.5rem;
+    }
+
+    .btn-2 button {
+        padding: 12px;
+        font-size: 1.5rem;
+    }
+
+    .about-us-image {
+        width: 50%;
+        height: 35%;
+    }
+
+    .card-page {
+        height: 180vh;
+    }
+
+    .box {
+        flex-direction: column;
+    }
+
+    .box-1 {
+        width: 80%;
+        height: 25%;
+        display: flex;
+        margin: 0 0 5% 0;
+    }
+
+    .box-image {
+        width: 40%;
+        height: 100%;
+    }
+
+    .box-1-text {
+        width: 60%;
+        height: 100%;
+        padding: 10px;
+    }
+
+    .box-1-text h2 {
+        font-size: 2rem;
+    }
+
+    .box-1-text button {
+        padding: 8px;
+    }
+
+    .box-1-text p {
+        font-size: 1.5rem;
+        line-height: 1.3;
+    }
+
+    .review {
+        font-size: 3rem;
+    }
+
+    .review span {
+        font-size: 2rem;
+    }
+
+    .instagram-follow {
+        height: 150vh;
+    }
+
+    .insta-section-1 {
+        font-size: 3.5rem;
+    }
+
+    .insta-section-2 img {
+        width: 45%;
+        height: 30%;
+    }
+
+    .insta-section-3 span {
+        font-size: 2.5rem;
+    }
+
+    .footer {
+        height: 150vh;
+    }
+
+    .registration {
+        padding: 10% 0 0 0;
+        flex-direction: column;
+    }
+
+    .registration-text {
+        width: 80%;
+        height: 20%;
+    }
+
+    .registration-text>p:first-child {
+        font-size: 3.5rem;
+    }
+
+    .registration-text>p:last-child {
+        font-size: 2rem;
+    }
+
+    .registration-form {
+        width: 80%;
+        height: 80%;
+        font-size: 1.8rem;
+    }
+
+    .form-section-1 {
+        height: 35%;
+        flex-direction: column;
+    }
+
+    .form-section-1 div {
+        width: 100%;
+    }
+
+    .form-section-2 {
+        height: 65%;
+    }
+
+}
+
+/* media query tablet end */
+
+
+/* media query mobile start */
+@media only screen and (min-width:320px) and (max-width:600px) {
+    .header {
+        background: url("./img/hand-workplace-working-analysis-note.jpg") no-repeat 60% 0%/cover;
+    }
+
+    .navbar {
+        height: 10%;
+        justify-content: center;
+        padding: unset;
+    }
+
+    .menu {
+        display: block;
+        position: absolute;
+        left: 10%;
+        top: 2.9%;
+    }
+
+    .menu svg {
+        /* fill: #ce6964; */
+        fill: floralwhite;
+    }
+
+    .logo img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .company-name h1 {
+        font-size: 2.5rem;
+    }
+
+    .company-name h4 {
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+    }
+
+    .chkbox {
+        display: none;
+    }
+
+    .chkbox:checked~.nav-2 {
+        left: 0%;
+        transition: left 1s linear;
+    }
+
+    .chkbox:not(:checked)~.nav-2 {
+        left: -50%;
+        transition: left 1s linear;
+    }
+
+    .nav-2 {
+        width: 40%;
+        flex-direction: column;
+        background-color: #e1e15f;
+        border-radius: 0 0 5px 0;
+        position: absolute;
+        top: 10%;
+        z-index: 5;
+    }
+
+    .nav-2-list {
+        flex-direction: column;
+        align-items: center;
+        margin: 20% 0 -10% 0;
+    }
+
+    .nav-2-list li a {
+        color: red;
+        font-size: 1.5rem;
+    }
+
+    .nav-2-list li a:hover {
+        color: #d6751a;
+        font-size: 2rem;
+        color: green;
+    }
+
+    .nav-2-list li a::after {
+        background-color: #3428c6e0;
+    }
+
+    .nav-2-sm {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        margin: 0 0 20% 0;
+    }
+
+    .nav-2-sm img {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .nav-2-sm img:hover {
+        filter: drop-shadow(2px 2px 5px red) drop-shadow(-2px -2px 5px yellow);
+    }
+
+    .action-1,
+    .action-2 {
+        width: 80%;
+    }
+
+    .action-1 p {
+        font-size: 3rem;
+    }
+
+    .action-2 p {
+        font-size: 1.7rem;
+    }
+
+    .btn-1 button {
+        padding: 10px;
+        font-size: 1.5rem;
+    }
+
+    .about-us-page {
+        flex-direction: column-reverse;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 120vh;
+    }
+
+    .about-us-text {
+        width: 80%;
+    }
+
+    .about-us-image {
+        width: 80%;
+        height: 35%;
+    }
+
+    .about-us-text h2 {
+        font-size: 3.5rem;
+    }
+
+    .about-us-text p {
+        font-size: 1.5rem;
+    }
+
+    .btn-2 button {
+        font-size: 1.5rem;
+        margin: 5% 0 0 0;
+        padding: 10px;
+    }
+
+    .card-page {
+        height: 160vh;
+    }
+
+    .box {
+        flex-direction: column;
+    }
+
+    .box-1 {
+        width: 80%;
+        height: 25%;
+        display: flex;
+        margin: 0 0 5% 0;
+    }
+
+    .box-image {
+        width: 40%;
+        height: 100%;
+    }
+
+    .box-1-text {
+        width: 60%;
+        height: 100%;
+        padding: 10px;
+    }
+
+    .box-1-text h2 {
+        font-size: 1.4rem;
+    }
+
+    .box-1-text button {
+        padding: 4px;
+        font-size: 1.2rem;
+    }
+
+    .box-1-text p {
+        font-size: 1.1rem;
+        line-height: 1.3;
+    }
+
+    .review {
+        font-size: 2rem;
+    }
+
+    .review span {
+        font-size: 2rem;
+    }
+
+    .instagram-follow {
+        padding: 0 10%;
+        height: 150vh;
+    }
+
+    .insta-section-1 {
+        font-size: 2rem;
+        padding-top: 5%;
+    }
+
+    .insta-section-2 img {
+        width: 45%;
+        height: 25%;
+    }
+
+    @keyframes diagonal1 {
+        from {
+            transform: rotate3d(1, 1, 0, 0deg);
+        }
+
+        50% {
+            box-shadow: 3px 3px 5px 2px yellow;
+        }
+
+        75% {
+            box-shadow: -3px -3px 5px 2px rgb(40, 219, 40);
+        }
+
+        to {
+            transform: rotate3d(1, 1, 0, -360deg);
+        }
+    }
+
+    .insta-section-3 img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .insta-section-3 span {
+        font-size: 1.5rem;
+    }
+
+    .footer {
+        height: 150vh;
+    }
+
+    .registration {
+        height: 90%;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .registration-text {
+        width: 80%;
+        height: 30%;
+        justify-content: center;
+    }
+
+    .registration-text>p:first-child {
+        font-size: 2.5rem;
+    }
+
+    .registration-text>p:last-child {
+        font-size: 1.4rem;
+    }
+
+    .registration-form {
+        width: 80%;
+        height: 70%;
+        font-size: 1.7rem;
+        justify-content: flex-start;
+        gap: unset;
+    }
+
+    .form-section-1 {
+        height: 40%;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: unset;
+    }
+
+    .form-section-1 div {
+        width: 100%;
+    }
+
+    .form-section-1 input {
+        padding: 5px;
+    }
+
+    .form-section-2 {
+        height: 60%;
+    }
+
+    #sm-bottom {
+        display: none;
+    }
+}
+
+@media only screen and (min-width:320px) and (max-width:450px) {
+    .insta-section-2 img {
+        width: 45%;
+        height: 18%;
+    }
+}
+
+/* media query mobile end */
